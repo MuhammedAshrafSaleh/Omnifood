@@ -1,0 +1,159 @@
+/*==============================================================================================================*/
+/*============================================Big Size==========================================================*/
+/*==============================================================================================================*/
+@media only screen and (max-width: 1200px) {
+}
+/*==============================================================================================================*/
+/*============================================Desktop===========================================================*/
+/*==============================================================================================================*/
+@media only screen and (max-width: 1023px) {
+  .container {
+    width: 90%;
+    margin: 0 5%;
+  }
+  html {
+    font-size: 85%;
+  }
+  .header__body {
+    margin-top: 100px;
+  }
+  .heading {
+    font-size: 200%;
+  }
+  /*-----------------Features--------------------*/
+  .features__box {
+    width: 47%;
+    float: left;
+    margin-left: 3%;
+    padding: 15px 0;
+  }
+  .app__item {
+    margin-bottom: 40px;
+  }
+  .app__img img {
+    width: 50%;
+  }
+  /*-----------------Opinions--------------------*/
+  .opinions__quote {
+    line-height: 20px;
+  }
+  /*-----------------Plans--------------------*/
+  .plans__item {
+    font-size: 100%;
+  }
+}
+/*==============================================================================================================*/
+/*============================================Tablet============================================================*/
+/*==============================================================================================================*/
+@media only screen and (max-width: 767px) {
+  .container {
+    width: auto;
+  }
+  .heading-body {
+    font-size: 160%;
+  }
+  /*-----------------nav--------------------*/
+  .header .nav__list {
+    display: none;
+  }
+  /*-----------------Header--------------------*/
+  .header__body {
+    text-align: center;
+  }
+
+  /*-----------------Features--------------------*/
+  .features__box {
+    width: 90%;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0 auto;
+    float: none;
+  }
+  /*-----------------Testimonials--------------------*/
+  .testimonials__gallary .testimonials__box {
+    width: 50%;
+  }
+  /*-----------------app--------------------*/
+  .app__img {
+    text-align: center;
+    width: 100%;
+  }
+  .app__img img {
+    width: 40%;
+    padding-right: 0;
+    margin-bottom: 20px;
+    float: none;
+  }
+  .app__list {
+    float: left;
+    width: 80%;
+    margin: 0 10%;
+  }
+  .app__item {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .app__item:last-child {
+    margin-top: 50px;
+  }
+  /*-----------------Opinions--------------------*/
+  .opinions__box {
+    width: 80%;
+    margin: 60px auto;
+    float: none;
+  }
+  .opinions__quote {
+    font-size: 105%;
+  }
+  .opinions__quote::before {
+    left: -40px;
+  }
+  /*-----------------Plans--------------------*/
+  .plans__box {
+    width: 60%;
+    float: none;
+    margin: 3% auto;
+  }
+  .form__label {
+    width: 100%;
+    float: none;
+  }
+  .form__input,
+  textarea,
+  select {
+    float: none;
+    width: 100%;
+    margin: 5px 0;
+  }
+  .form__input[type="checkbox"] {
+    float: none;
+    margin-left: 20px;
+  }
+  .form__group:last-child {
+    padding: 0 0;
+  }
+  .form__group .btn {
+    display: block;
+    text-align: center;
+  }
+  .footer ul {
+    float: none;
+    text-align: center;
+    width: auto;
+  }
+  .footer li {
+    display: block;
+    font-size: 120%;
+  }
+  .footer .social__list {
+    margin: 10px 0px;
+  }
+  .footer .social__list li {
+    display: inline;
+  }
+}
+/*==============================================================================================================*/
+/*============================================Phones===========================================================*/
+/*==============================================================================================================*/
+@media only screen and (max-width: 500px) {
+}

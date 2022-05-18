@@ -1,0 +1,29 @@
+.heading {
+  font-weight: 300;
+  color: $white;
+  font-size: 45px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+.heading-body {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  color: $gray;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 40%;
+    background-color: $lightOrange;
+    width: 15%;
+    height: 2px;
+  }
+}
+.heading-secondary {
+  font-size: 22px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  color: $gray;
+  font-weight: 300;
+}

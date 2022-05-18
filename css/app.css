@@ -1,0 +1,479 @@
+/*----------------------------
+Base
+------------------------------*/
+/*-----------------Colors--------------------*/
+:root {
+  --lightOrange: #e67e22;
+  --darkOrange: #cf6d17;
+  --white: #fff;
+  --gray: #555;
+  --lightGray: #f4f4f4;
+  --simpleWhite: #fcfcfc;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato";
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/*-------------------------------
+Components
+--------------------------------*/
+
+/*-----------------Nav--------------------*/
+.nav {
+  width: 100%;
+  display: flex;
+  height: 100px;
+  padding: 0 3%;
+  margin-top: 15px;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
+}
+.nav__item {
+  margin-left: 30px;
+}
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 110%;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+.nav__link:hover {
+  border-bottom: 1px solid var(--lightOrange);
+}
+.nav__icon {
+  max-width: 100px;
+}
+/*-----------------Overlay--------------------*/
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/*-----------------Buttons--------------------*/
+.btn {
+  text-decoration: none;
+  color: var(--lightOrange);
+  border: 1px solid var(--lightOrange);
+  font-size: 110%;
+  padding: 5px 30px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-bg {
+  background-color: var(--lightOrange);
+  color: var(--white);
+}
+.btn-bg:hover {
+  background-color: var(--darkOrange);
+  color: var(--white);
+}
+
+.btn-transparent {
+  color: #e67e22;
+  background-color: transparent;
+}
+.btn-transparent:hover {
+  background-color: var(--lightOrange);
+  color: var(--white);
+}
+/*-------------------------------
+Typography
+--------------------------------*/
+html {
+  font-size: 100%;
+}
+.heading {
+  font-weight: 300;
+  color: white;
+  font-size: 240%;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+.heading-body {
+  font-size: 180%;
+  text-align: center;
+  color: #555;
+}
+.heading-body::after {
+  content: "";
+  display: block;
+  background-color: var(--lightOrange);
+  width: 10%;
+  height: 2px;
+  margin: 10px auto;
+}
+
+.heading-secondary {
+  font-size: 120%;
+  text-transform: uppercase;
+  word-spacing: 4px;
+  color: #555;
+  font-weight: 300;
+}
+
+.text {
+  font-size: 110%;
+  font-weight: 300;
+  color: #555;
+}
+/*-------------------------------
+Utilities
+--------------------------------*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.sec-padding {
+  padding: 50px 0;
+}
+.mr-2 {
+  margin: 20px 0;
+}
+.mr-3 {
+  margin: 30px 0;
+}
+.mr-5 {
+  margin: 50px 0;
+}
+/*-------------------------------
+Pages
+--------------------------------*/
+/*-----------------Header--------------------*/
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../imgs/hero-min.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.header__body {
+  width: 100%;
+  padding: 0 3%;
+  margin-top: 200px;
+}
+/*-----------------Features--------------------*/
+.features {
+  width: 100%;
+}
+
+.features__head {
+  text-align: center;
+}
+.features__text {
+  width: 70%;
+  margin-left: 15%;
+}
+.features__box {
+  width: 23%;
+  margin-left: 2%;
+  float: left;
+  padding: 30px 0;
+}
+.features__icon {
+  font-size: 400%;
+  color: var(--lightOrange);
+}
+.features__icon img {
+  width: 100%;
+}
+.features__list {
+  list-style: none;
+}
+.features__item ion-icon {
+  font-size: 120%;
+  vertical-align: text-bottom;
+  color: var(--lightOrange);
+  margin-right: 10px;
+}
+.features__item span {
+  display: inline-block;
+  font-size: 120%;
+}
+.features__link {
+  text-transform: none;
+  color: var(--lightOrange);
+  padding-bottom: 5px;
+  border-bottom: 0.5px solid var(--lightOrange);
+}
+/*-----------------testimonials--------------------*/
+.testimonials {
+  width: 100%;
+}
+.testimonials h2 {
+  margin-bottom: 50px;
+}
+.testimonials__gallary {
+  width: 100%;
+}
+.testimonials__gallary .testimonials__box {
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.testimonials__gallary .testimonials__img {
+  max-width: 100%;
+  float: left;
+  transform: scale(1.3);
+  opacity: 0.7;
+  /*filter: brightness(70%);
+  */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}
+.testimonials__img:hover {
+  transform: scale(1);
+  opacity: 1;
+  /* filter: brightness(100%); */
+}
+/*-----------------How It Works--------------------*/
+.app {
+  background-color: var(--lightGray);
+}
+
+.app__container {
+  padding: 30px 0;
+}
+.app__img {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.app__img img {
+  width: 40%;
+  float: right;
+  padding-right: 10%;
+}
+.app__list {
+  float: right;
+  width: 50%;
+  margin-top: 30px;
+  list-style: none;
+}
+.app__item {
+  width: 100%;
+  margin-bottom: 50px;
+  @media only screen and (max-width:700px){
+    display:flex;
+    align-items:center;
+  }
+}
+.app .app__circle {
+  height: 60px;
+  width: 60px;
+  font-size: 180%;
+  border: 2px solid var(--darkOrange);
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  margin-right: 20px;
+  float: left;
+}
+.app .app__list img {
+  height: 50px;
+  width: auto;
+  margin-left: 10px;
+}
+
+/*-----------------Opinions--------------------*/
+.opinions {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../imgs/back-customers-min.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+}
+.opinions * {
+  color: var(--white);
+}
+.opinions h2 {
+  margin-bottom: 70px;
+}
+.opinions__box {
+  width: 30%;
+  margin: 0 1.5%;
+  float: left;
+}
+.opinions__quote {
+  font-size: 120%;
+  position: relative;
+  line-height: 25px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.opinions__quote::before {
+  content: "\201C";
+  display: block;
+  font-size: 600%;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+.opinions__user {
+  width: 100%;
+  /* display: flex;
+  align-items: center; */
+}
+.opinions__user img {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+  vertical-align: middle;
+  display: inline;
+}
+.opinions__user p {
+  display: inline;
+}
+/*-----------------Plans--------------------*/
+.plans {
+  background-color: var(--lightGray);
+}
+.plans hr {
+  border: 1px solid var(--lightGray);
+}
+.plans__box {
+  width: 30%;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: left;
+  margin-left: 3%;
+  border-radius: 10px;
+}
+.plans__head {
+  background-color: var(--simpleWhite);
+  border-radius: 10px;
+}
+.plans__text {
+  font-size: 300%;
+  color: var(--lightOrange);
+  font-weight: 100;
+}
+.plans__text sub {
+  font-size: 50%;
+}
+.plans__list {
+  list-style: none;
+}
+.plans__item {
+  font-size: 120%;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+.plans__item ion-icon {
+  vertical-align: middle;
+  color: var(--lightOrange);
+  margin-right: 10px;
+}
+.plans__footer {
+  text-align: center;
+}
+.plans__head,
+.plans__body,
+.plans__footer {
+  padding: 10px 20px;
+}
+/*------------------Form--------------------*/
+.form__group {
+  width: 70%;
+  padding: 15px 0;
+  margin: 0 auto;
+}
+.form__label {
+  width: 40%;
+  float: left;
+}
+.form__input,
+textarea,
+select {
+  float: right;
+  width: 60%;
+  outline: none;
+  padding: 7px 5px;
+  font-size: 120%;
+  color: var(--gray);
+  border: 1px solid#cCC;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form__input[type="checkbox"] {
+  width: auto;
+  float: left;
+}
+
+/*------------------Form--------------------*/
+.footer {
+  background-color: #333;
+  width: 100%;
+}
+.footer ul {
+  list-style: none;
+}
+.footer li {
+  display: inline;
+  margin-left: 20px;
+  font-size: 120%;
+}
+.footer a {
+  color: var(--gray);
+  text-decoration: none;
+}
+.footer__link {
+  text-decoration: none !important;
+}
+.footer__nav {
+  width: 100%;
+  padding: 10px 20px;
+}
+.footer__list {
+  width: 50%;
+  float: left;
+}
+.social__list {
+  float: right;
+}
+.footer ion-icon {
+  font-size: 180%;
+}
+.footer__body {
+  text-align: center;
+}
